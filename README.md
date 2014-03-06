@@ -1,6 +1,6 @@
 # ServiceStub
 
-A cross platform tool for mocking API services.
+A cross platform tool for mocking HTTP web services.
 
 # Status
 
