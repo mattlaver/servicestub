@@ -45,7 +45,7 @@ Create a GET file in each of the directories and populate them with fake API dat
 
 Place the servicestub at the root of the directory structure
 
-Run serviestub
+Run servicestub
 
 Open a browser and navigate to 
 
