@@ -14,7 +14,7 @@ A cross platform tool for creating dummy HTTP web services.
 - Returned digests must be in a file called GET
 
 
-# Examples: customers
+# Example: customers
 
 Say we wanted to fake the following API methods:
 
