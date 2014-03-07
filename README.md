@@ -31,7 +31,7 @@ Create a directory for customers and two customer id sub directories as:
 |   ├── 2/
 ```
 
-Create a GET file in each of the directories and populate it with the fake API data
+Create a GET file in each of the directories and populate them with fake API data
 
 ```
 ├── customers/
