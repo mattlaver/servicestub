@@ -16,7 +16,7 @@ A cross platform tool for creating dummy HTTP web services.
 
 # Example: customers
 
-Say we wanted to fake the following API methods:
+Suppose we wanted to fake the following API methods:
 
 ```
 HTTP Method: GET /customers
