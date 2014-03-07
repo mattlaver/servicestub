@@ -23,7 +23,7 @@ HTTP Method: GET /customers
 HTTP Method: GET /customers/:customerId
 ```
 
-1. Create a directory for customers and two customer id sub directories as:
+Create a directory for customers and two customer id sub directories as:
 
 ```
 ├── customers/
@@ -31,7 +31,7 @@ HTTP Method: GET /customers/:customerId
 |   ├── 2/
 ```
 
-2. Create a GET file in each of the directories and populate it with the fake API data
+Create a GET file in each of the directories and populate it with the fake API data
 
 ```
 ├── customers/
@@ -43,9 +43,9 @@ HTTP Method: GET /customers/:customerId
 ``` 
 
 
-3. Place the servicestub at the root of the directory structure
+Place the servicestub at the root of the directory structure
 
-4. Run serviestub
+Run serviestub
 
 Open a browser and navigate to 
 
