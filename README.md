@@ -10,22 +10,34 @@ A cross platform tool for creating dummy HTTP web services.
 
 ## Getting started
 
+- ServiceStub currently only supports GET methods. 
+- Returned digests must be in a file called GET
 
-Say we wanted to create a fake REST API for customers:
+
+# Examples: customers
+
+Say we wanted to fake the following API methods:
 
 HTTP Method: GET /customers
 HTTP Method: GET /customers/:customerId
 
-
-
+1. Create a directory structure that mimics the API like:
 
 ```
-servicestub/
-├── api/
-│   ├── customers/
-|   |── GET
-│   |   ├── 1/
-│   |   ├── GET
+├── customers/
+|── GET
+|   ├── 1/
+|   ├── GET
+|   ├── 2/
+|   ├── GET
 ```
 
+2. Create a GET file in each of the directories and populate it with the required digest
+3. Place the servicestub at the root of the directory structure
+4. Run serviestub
 
+Open a browser and navigate to 
+
+`http://localhost:3000/customers`
+`http://localhost:3000/customers/1`
+`http://localhost:3000/customers/2`
