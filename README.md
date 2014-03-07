@@ -39,5 +39,7 @@ HTTP Method: GET /customers/:customerId
 Open a browser and navigate to 
 
 `http://localhost:3000/customers`
+
 `http://localhost:3000/customers/1`
+
 `http://localhost:3000/customers/2`
