@@ -23,7 +23,15 @@ HTTP Method: GET /customers
 HTTP Method: GET /customers/:customerId
 ```
 
-1. Create a directory structure that mimics the API like:
+1. Create a directory for customers and two customer id sub directories as:
+
+```
+├── customers/
+|   ├── 1/
+|   ├── 2/
+```
+
+2. Create a GET file in each of the directories and populate it with the fake API data
 
 ```
 ├── customers/
@@ -32,10 +40,11 @@ HTTP Method: GET /customers/:customerId
 |   ├── GET
 |   ├── 2/
 |   ├── GET
-```
+``` 
 
-2. Create a GET file in each of the directories and populate it with the required digest
+
 3. Place the servicestub at the root of the directory structure
+
 4. Run serviestub
 
 Open a browser and navigate to 
