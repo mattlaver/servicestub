@@ -18,8 +18,10 @@ A cross platform tool for creating dummy HTTP web services.
 
 Say we wanted to fake the following API methods:
 
+```
 HTTP Method: GET /customers
 HTTP Method: GET /customers/:customerId
+```
 
 1. Create a directory structure that mimics the API like:
 
