@@ -2,8 +2,11 @@ package main
 
 import	(
     "fmt"
+	"io"
+	"io/ioutil"
 	"github.com/codegangsta/martini"
 	"net/http"
+    "net/url"
 	"strings"
 )
 
@@ -35,12 +38,21 @@ func ParseRoute(service *ServiceImpl) martini.Handler {
 			if b.path == path {
 
 				if r.Method == "GET" {
-					http.ServeFile(w, r, b.path + "/GET")
-				}
 
-				// serve up the file
-				fmt.Println(r.Method)
-				fmt.Fprintf(w, "Path Found")
+					fmt.Println(r.URL.RawQuery)
+					m, _ := url.ParseQuery(r.URL.RawQuery)
+
+					// need to wrap the file in a function if jsonp
+					content, _ := ioutil.ReadFile(b.path + "/GET")
+
+					// check to see if this is a jsonp call
+					if value, ok := m["callback"]; ok {
+						s := fmt.Sprintf("%s(%s)", value[0], string(content))
+						io.WriteString(w, s)
+					} else {
+				        io.WriteString(w, string(content))
+				    }
+				}
 			}
 		}
 
