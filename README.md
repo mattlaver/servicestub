@@ -5,7 +5,7 @@ A cross platform tool for creating dummy HTTP web services.
 ## How to build the code
 
 - Clone: `git clone https://github.com/mattlaver/servicestub.git`
-- Build: `go get -d && go build`
+- Build: `go build github.com/mattlaver/servicestub`
 
 
 ## Getting started
@@ -16,7 +16,7 @@ A cross platform tool for creating dummy HTTP web services.
 
 # Example: customers
 
-Say we wanted to fake the following API methods:
+Suppose we wanted to fake the following API methods:
 
 ```
 HTTP Method: GET /customers
@@ -31,7 +31,7 @@ Create a directory for customers and two customer id sub directories as:
 |   ├── 2/
 ```
 
-Create a GET file in each of the directories and populate it with the fake API data
+Create a GET file in each of the directories and populate them with fake API data
 
 ```
 ├── customers/
@@ -45,7 +45,7 @@ Create a GET file in each of the directories and populate it with the fake API d
 
 Place the servicestub at the root of the directory structure
 
-Run serviestub
+Run servicestub
 
 Open a browser and navigate to 
 
