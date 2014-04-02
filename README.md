@@ -5,7 +5,7 @@ A cross platform tool for creating dummy HTTP web services.
 ## How to build the code
 
 - Clone: `git clone https://github.com/mattlaver/servicestub.git`
-- Build: `go get -d && go build`
+- Build: `go build github.com/mattlaver/servicestub`
 
 
 ## Getting started
