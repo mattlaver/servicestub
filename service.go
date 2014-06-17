@@ -32,6 +32,9 @@ func (service *ServiceImpl) Start(settings Settings) {
 func ParseRoute(service *ServiceImpl) martini.Handler {
 	return func(w http.ResponseWriter, r *http.Request) {
 
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Content-type", "application/json")
+
 		for _, b := range service.routes {
 
 			path := strings.TrimPrefix(r.URL.Path, "/")
