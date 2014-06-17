@@ -1,6 +1,6 @@
 # ServiceStub [![Build Status](https://secure.travis-ci.org/mattlaver/servicestub.png)](http://travis-ci.org/mattlaver/servicestub)
 
-A cross platform tool for creating dummy HTTP web services.
+A cross platform tool for creating dummy HTTP web services. 
 
 ## How to build the code
 
@@ -54,3 +54,21 @@ Open a browser and navigate to
 `http://localhost:3000/customers/1`
 
 `http://localhost:3000/customers/2`
+
+
+# Example: JSONP customers
+
+JSONP supported, e.g. using jQuery:
+
+```
+$.ajax({
+    type: "GET",
+    dataType: "jsonp",
+    jsonCallback: "jsonp",
+    url: "http://localhost:3000/customers",
+    success: function(data) {
+        console.log(data);
+    }
+});
+``` 
+
